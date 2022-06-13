@@ -4,7 +4,7 @@ require('../functions.php');
 
 $db = new Database();
 
-$db->query("SELECT `id`, `country`, `capital`, `continent`, `population` FROM `country`;");
+$db->query("SELECT `id`, `merk`, `model`, `topsnelheid`, `prijs` FROM `car`;");
 
 $result = $db->resultSet();
 
@@ -14,23 +14,23 @@ foreach ($result as $key => $value)
 {
   //Probeer alle hoofdsteden uit de databasetabel country op het scherm te krijgen.
   $rows .= "<tr>
-              <td>$value->country</td>
-              <td>$value->capital</td>
-              <td>$value->continent</td>
-              <td>$value->population</td>
+              <td>$value->merk</td>
+              <td>$value->model</td>
+              <td>$value->topsnelheid</td>
+              <td>$value->prijs</td>
             </tr>";
 }
 
 ?>
-
+<h2>De vijf duurste auto's ter wereld</h2>
 <a href="./create.php">Nieuw record</a>
 <table>
   <thead>
     <tr>
-      <th>Land</th>
-      <th>Hoofdstad</th>
-      <th>Continent</th>
-      <th>Aantal inwoners</th>
+      <th>Merk</th>
+      <th>Model</th>
+      <th>Topsnelheid</th>
+      <th>Prijs</th>
     </tr>
   </thead>
   <tbody>
