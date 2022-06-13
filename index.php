@@ -40,6 +40,13 @@
                 <td><a href="person/index.php">person</a></td>
                 <td>Dit is de eerste class die ik heb gemaakt. We maken een class en een object van de class</td>
               </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Dit is een PDO omgeving</td>
+                <td><a href="pdo/index.php">pdo</a></td>
+                <td>We gaan oefenen met PDO</td>
+              </tr>
             </tbody>
           </table>
         </div>
