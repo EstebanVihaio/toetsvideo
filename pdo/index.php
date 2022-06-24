@@ -4,7 +4,8 @@ require('../functions.php');
 
 $db = new Database();
 
-$db->query("SELECT `id`, `merk`, `model`, `topsnelheid`, `prijs` FROM `car`;");
+$db->query("SELECT * FROM `richestpeople` ORDER BY `networth` DESC;");
+// $db->query("SELECT `id`, `name`, `networth  `, `age`, `compagny` FROM `richestpeople` ORDER BY `networth` ASC;");
 
 $result = $db->resultSet();
 
@@ -14,23 +15,23 @@ foreach ($result as $key => $value)
 {
   //Probeer alle hoofdsteden uit de databasetabel country op het scherm te krijgen.
   $rows .= "<tr>
-              <td>$value->merk</td>
-              <td>$value->model</td>
-              <td>$value->topsnelheid</td>
-              <td>$value->prijs</td>
+              <td>$value->name</td>
+              <td>$value->networth</td>
+              <td>$value->age</td>
+              <td>$value->compagny</td>
             </tr>";
 }
 
 ?>
-<h2>De vijf duurste auto's ter wereld</h2>
+<h2>De vijf rijkste mensen ter wereld</h2>
 <a href="./create.php">Nieuw record</a>
 <table>
   <thead>
     <tr>
-      <th>Merk</th>
-      <th>Model</th>
-      <th>Topsnelheid</th>
-      <th>Prijs</th>
+      <th>Naam</th>
+      <th>Vermogen</th>
+      <th>Leeftijd</th>
+      <th>Bedrijf</th>
     </tr>
   </thead>
   <tbody>

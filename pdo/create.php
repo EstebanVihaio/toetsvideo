@@ -1,10 +1,10 @@
 <!-- Maak een formulier -->
-<h3>Maak een nieuw record</h3>
+<h3>Voeg een nieuw rijk persoon toe</h3>
 <form action="./create_script.php" method="post">
   <table>
     <tr>
       <td>
-        <label for="country">Land: </label>
+        <label for="country">Naam: </label>
       </td>
       <td>
         <input type="text" name="country" id="country">
@@ -12,7 +12,7 @@
     </tr>
     <tr>
       <td>
-        <label for="capital">Hoofdstad: </label>
+        <label for="capital">Vermogen: </label>
       </td>
       <td>
         <input type="text" name="capital" id="capital">
@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <td>
-        <label for="continent">Continent: </label>
+        <label for="continent">Leeftijd: </label>
       </td>
       <td>
         <input type="text" name="continent" id="continent">
@@ -28,14 +28,14 @@
     </tr>
     <tr>
       <td>
-        <label for="population">Aantal inwoners: </label>
+        <label for="population">Bedrijf: </label>
       </td>
       <td>
         <input type="number" name="population" id="population">
       </td>
     </tr>
     <tr>
-      <td><input type="submit" value="submit"></td>
+      <td><input type="submit" value="Verzenden"></td>
     </tr>
   </table>
 
